@@ -8,7 +8,7 @@ rem set PYTHONPATH=%CD%
 rem http://www.nltk.org/data.html - instead, set ANOTHER environment variable
 set NLTK_DATA=%CD%\nltk_data
 
-rem Yapari saikyou
+rem Yapari saikyou 
 doskey idle=D:\Users\Jonathan\Documents\Qt\projs-2008\Portable-Python-2.7.3.2\IDLE-Portable.exe
 
 
