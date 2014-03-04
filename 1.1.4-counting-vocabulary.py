@@ -1,4 +1,4 @@
-from __future__ import division # Python 3 automatic float division of ints
+# from __future__ import division # must be at top of file
 from nltk.book import * # slow! reading in 9-text corpora
 
 
@@ -26,7 +26,7 @@ for text in texts:
     print \
         str(total).rjust(total_wordcount_width), \
         str(distinct).rjust(distinct_wordcount_width), \
-        str(total / distinct).rjust(ratio_width), \
+        str(float(total) / distinct).rjust(ratio_width), \
         text.name
         # meh, gave up on formatting. this doesn't quite work correctly
     #print "{:7d}{:9d}".format(len(text), len(set(text))), text.name
