@@ -9,7 +9,14 @@ rem http://www.nltk.org/data.html - instead, set ANOTHER environment variable
 set NLTK_DATA=%CD%\nltk_data
 
 rem Yapari saikyou 
-doskey idle=D:\Users\Jonathan\Documents\Qt\projs-2008\Portable-Python-2.7.3.2\IDLE-Portable.exe
+rem http://stackoverflow.com/questions/5811966/windows-batch-script-get-current-drive-name
+set DRIVE=%~d0
+doskey idle="%DRIVE%\Users\Jonathan\Documents\Qt\projs-2008\Portable-Python-2.7.3.2\IDLE-Portable.exe"
 
-
-C:\Windows\System32\cmd.exe /A /Q /K C:\Progra~2\QtSDK1.1\Desktop\Qt\4.7.3\msvc2008\bin\qtenv2.bat
+set QT_HOME=C:\Progra~2\QtSDK1.1\Desktop\Qt\4.7.3\msvc2008\bin\qtenv2.bat
+set QT_WORK=C:\Progra~2\Qt\QtSDK1.1\Desktop\Qt\4.7.3\msvc2008\bin\qtenv2.bat
+if exist %QT_HOME% (
+	C:\Windows\System32\cmd.exe /A /Q /K %QT_HOME%
+) else (
+	C:\Windows\System32\cmd.exe /A /Q /K %QT_WORK%
+)
