@@ -3,6 +3,11 @@ print '''
 In order of appearance.
 To display docstring of 'obj', just perform
 >>> help(obj)
+'''
+
+print '''
+1. Language Processing and Python
+#################################
 
 1.1  Computing with Language: Text and Words
 ===========================================
@@ -36,4 +41,58 @@ nltk.probability.FreqDist  # help(FreqDist) for more info
 nltk.util.bigrams([word0, word1, ..., wordN]): returns [(word0, word1), (word1, word2), ..., (wordN-1, wordN)]
 
 nltk.text.Text.collocations(): returns all UNUSUALLY frequent two-word phrases ("ignoring stopwords")
+
+
+1.5  Automatic Natural Language Understanding
+=============================================
+nltk.misc.babelfish.babelize_shell(): interactive shell that attempts machine translation (12 iterations)
+- I'm getting "BabelfishChangedError: Can't recognize translated string", even for book's examples...meh.
+
+nltk.chat.chatbots(): "an example of a primitive dialogue system"
+'''
+
+
+
+print '''
+2. Accessing Text Corpora and Lexical Resources
+###############################################
+
+2.1   Accessing Text Corpora
+============================
+
+nltk.corpus.gutenberg
+---------------------
+- subclass of PlaintextCorpusReader
+- fileids(): lists names of all .txt files in gutenberg/
+- words(filename): return file as "list" of words and punctuation symbols 
+    - (pass to Text() constructor)
+    - actual class is nltk.corpus.reader.util.StreamBackedCorpusView, hence truncated output
+- raw(filename): returns file as raw string. includes whitespace!
+- sents(filename): returns file as "list" of sentences, each sentence as a RAW LIST OF WORDS + punctuation
+
+see also PlaintextCorpusReader(self, path, fileids): where fileids can be wildcards, or regexes?
+
+
+Other corpora (query with fileids()) subpackages of nltk.corpus
+----------------------------------
+webtext: forum posts, conversations, movie script, want ads, wine reviews, IM chats
+brown: the first million-word electronic corpus of English, est. 1961 -  http://icame.uib.no/brown/bcm-los.html
+- subclass of CategorizedTaggedCorpusReader
+- brown.categories(self): returns categories as list of strings
+- brown.words(self, fileids=None, categories=None): returns one big "list" of words in all specified files, categories
+- brown.sents(self, fileids=None, categories=None): returns one big "list" of sentences (each sentence a RAW list of words)
+reuters: also a subclass of CategorizedTaggedCorpusReader
+inaugural: a subclass of PlaintextCorpusReader, like gutenberg
+cess_esp: Spanish-language?
+floresta: um, Italian?
+udhr: Universal Declaration of Human Rights, in over 300 languages!
+
+See Table 2.3 for more info about the corpus API.
+
+Other
+-----
+nltk.probability.ConditionalFreqDist( [(condition, sample) tuples] ): binned frequencies. or is it a GENERATOR argument??
+- tabulate(conditions=[subset of conditions], samples=[subset of samples]): see figure above "Reuters Corpus" heading
+- plot()
+
 '''
