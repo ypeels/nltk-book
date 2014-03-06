@@ -103,4 +103,12 @@ nltk.probability.ConditionalFreqDist (cont.)
 - [bin]: returns the (unconditional!) FreqDist for bin
 - Table 2.4 for more info
 
+
+2.4   Lexical Resources
+=======================
+
+nltk.corpus.stopwords: high-frequency words like the, to and also
+- subclass of WordListCorpusReader
+- words(fileids): filenames 'english', 'french', etc.
+
 '''
