@@ -125,4 +125,14 @@ cmudict: a pronouncing dictionary
 - in 2.4.2 "A Pronouncing Dictionary", they use ConditionalFreqDist on this corpus where they really mean to use a simpler 2-d data structure
   - a dictionary of words will do
 
+swadesh: lists of about 200 common words in several languages (all in the same order)
+- words(fileids): will APPEND the languages given by fileids, rather uselessly (or at least inconveniently)
+- entries(fileids): convenience function for zip( *[swadesh.words(id) for id in fileids] ). try passing to dict constructor!
+  
+toolbox: 
+- class ToolboxCorpusReader, and see http://www.sil.org/computing/toolbox/
+- rather irregular data, can't be spreadsheeted...
+- "The loose structure of Toolbox files makes it hard for us to do much more with them at this stage."
+- see Chapter 11
+
 '''
