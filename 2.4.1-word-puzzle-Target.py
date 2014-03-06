@@ -1,7 +1,5 @@
 import nltk
 
-wordbank = nltk.corpus.words.words()
-
 # my instinct is to solve it "backwards" - iterate through the wordbank and find all words satisfying the puzzle's constraint
 # the alternative is annoying logic, sampling from the letters...
 # well apparently this is how the book does it too! so i guess it's forward-thinking, haha
@@ -34,6 +32,7 @@ def is_a_solution(word, required, optional):
 required_letters = ['r']
 optional_letters = ['e', 'v', 'o', 'l', 'v', 'i', 'n', 'g']
 
+wordbank = nltk.corpus.words.words()
 solutions = []
 for word in wordbank:
     if is_a_solution(word, required_letters, optional_letters):
