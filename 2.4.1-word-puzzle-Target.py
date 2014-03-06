@@ -4,7 +4,7 @@ import nltk
 # my instinct is to solve it "backwards" - iterate through the wordbank and find all words satisfying the puzzle's constraint
 # the alternative is annoying logic, sampling from the letters...
 # well apparently this is how the book does it too! so i guess it's forward-thinking, haha
-# book's solution uses ntlk.probability.FreqDist instead. meh.  (ohhhh fdist1 < fdist2 if samples in fdist1 occur fewer times than in fdist2)
+# book's solution uses ntlk.probability.FreqDist instead. meh.  (ohhhh fdist1 < fdist2 if samples in fdist1 occur fewer times than in fdist2 - see Table 1.2)
 # weren't they trying to teach functions? i guess that was SO section 2.3
 
 
