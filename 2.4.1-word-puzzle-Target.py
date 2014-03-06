@@ -8,26 +8,25 @@ wordbank = nltk.corpus.words.words()
 # COULD move these constants into is_a_solution(), but then there'd be redundant assignments??
 
 
-# v1: Pythonic iteration
+# v2: Pythonic iteration, refactored about as clean as I can think of
+def can_spell(bank, word):
+    '''Returns True iff "word" can be spelled by the letters in "bank"'''
+    for letter in word:
+        if bank.count(letter) < word.count(letter):
+            return False
+    return True
+
+
 def is_a_solution(word, required, optional):
-    '''Returns True iff 'word' can be spelled by letters in "required" + "optional"'''    
+    '''Returns True iff 'word' can be spelled by letters in "required" + "optional", and is 4 letters or longer'''    
     
-    # requirement 1: word must contain ALL letters in "required"; abort if not
-    for letter in set(required):
-        if word.count(letter) < required.count(letter):     # word doesn't contain enough required letters
-            return False
-
-    # requirement 2: letter bank must contain ALL letters in "word; abort if not.
-    # I smell refactoring...
-    letter_bank = optional + required
-    for letter in set(word):
-        if letter_bank.count(letter) < word.count(letter):  # bank doesn't contain enough letters to spell word!
-            return False
-
-    assert(len(word) <= len(letter_bank))
-    
-    # requirement 3: word is 4 letters or longer
-    return len(word) >= 4
+    # 1: word contains all required letters
+    # 2: letter bank contains all letters in word
+    # 3: word is 3 letters or longer
+    return \
+        can_spell(word, required) and \
+        can_spell(optional+required, word) and \
+        len(word) >= 4                          
     
     
 required_letters = ['r']
