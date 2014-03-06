@@ -4,8 +4,8 @@ wordbank = nltk.corpus.words.words()
 
 # my instinct is to solve it "backwards" - iterate through the wordbank and find all words satisfying the puzzle's constraint
 # the alternative is annoying logic, sampling from the letters...
+# well apparently this is how the book does it too! so i guess it's forward-thinking, haha
 
-# COULD move these constants into is_a_solution(), but then there'd be redundant assignments??
 
 
 # v2: Pythonic iteration, refactored about as clean as I can think of
@@ -29,11 +29,20 @@ def is_a_solution(word, required, optional):
         len(word) >= 4                          
     
     
+# COULD move these constants into is_a_solution(), but then there'd be redundant assignments??
+# too lazy to write a class
 required_letters = ['r']
 optional_letters = ['e', 'v', 'o', 'l', 'v', 'i', 'n', 'g']
+
 solutions = []
 for word in wordbank:
     if is_a_solution(word, required_letters, optional_letters):
         solutions.append(word)
         
 print len(solutions), "solutions found:", solutions
+full_solutions = [s for s in solutions if len(s) == len(required_letters + optional_letters)]
+if len(full_solutions) > 0:
+    print "Full solutions using all letters:", full_solutions
+else:
+    print "No solutions use all letters! You fail it!"
+
