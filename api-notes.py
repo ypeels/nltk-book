@@ -107,10 +107,22 @@ nltk.probability.ConditionalFreqDist (cont.)
 2.4   Lexical Resources
 =======================
 
-nltk.corpus.stopwords: high-frequency words like the, to and also
+
+Moar corpora
+------------
+stopwords: high-frequency words like the, to and also
 - subclass of WordListCorpusReader
 - words(fileids): filenames 'english', 'french', etc.
 
-nltk.corpus.names: another subclass of WordListCorpusReader; male.txt and female.txt
+names: another subclass of WordListCorpusReader; male.txt and female.txt
+
+cmudict: a pronouncing dictionary
+- customized class CMUDictCorpusReader
+- "list" of: (word, [syllables])
+- quacks like a Python dictionary, but cmudict[word] returns ALL CATALOGUED PRONUNCIATIONS [[syllables1], [syllables2]]
+- can use as a rhyming dictionary
+- 1: primary stress,   2: secondary stress,   0: no stress - can use as a "rhythm dictionary"
+- in 2.4.2 "A Pronouncing Dictionary", they use ConditionalFreqDist on this corpus where they really mean to use a simpler 2-d data structure
+  - a dictionary of words will do
 
 '''
