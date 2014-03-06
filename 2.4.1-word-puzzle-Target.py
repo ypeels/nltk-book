@@ -8,7 +8,6 @@ import nltk
 # weren't they trying to teach functions? i guess that was SO section 2.3
 
 
-# v2: Pythonic iteration, refactored about as clean as I can think of
 def can_spell(bank, word):
     '''Returns True iff "word" can be spelled by the letters in "bank"'''
     for letter in word:
@@ -31,17 +30,15 @@ def is_a_solution(word, required, optional):
     
 # COULD move these constants into is_a_solution(), but then there'd be redundant assignments??
 # too lazy to write a class
-required_letters = ['r']
-optional_letters = ['e', 'v', 'o', 'l', 'v', 'i', 'n', 'g']
+required = ['r']
+optional = ['e', 'v', 'o', 'l', 'v', 'i', 'n', 'g']
 
+# v3: list comprehension, like book's solution
 wordbank = nltk.corpus.words.words()
-solutions = []
-for word in wordbank:
-    if is_a_solution(word, required_letters, optional_letters):
-        solutions.append(word)
+solutions = [word for word in wordbank if is_a_solution(word, required, optional)]
         
 print len(solutions), "solutions found:", solutions
-full_solutions = [s for s in solutions if len(s) == len(required_letters + optional_letters)]
+full_solutions = [s for s in solutions if len(s) == len(required + optional)]
 if len(full_solutions) > 0:
     print "Full solutions using all letters:", full_solutions
 else:
