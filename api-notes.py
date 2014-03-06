@@ -86,13 +86,21 @@ inaugural: a subclass of PlaintextCorpusReader, like gutenberg
 cess_esp: Spanish-language?
 floresta: um, Italian?
 udhr: Universal Declaration of Human Rights, in over 300 languages!
-
-See Table 2.3 for more info about the corpus API.
+Table 2.3: for more info about the corpus API.
 
 Other
 -----
 nltk.probability.ConditionalFreqDist( [(condition, sample) tuples] ): binned frequencies. or is it a GENERATOR argument??
 - tabulate(conditions=[subset of conditions], samples=[subset of samples]): see figure above "Reuters Corpus" heading
 - plot()
+
+
+2.2   Conditional Frequency Distributions
+=========================================
+
+nltk.probability.ConditionalFreqDist (cont.)
+- conditions(): returns list of category bins
+- [bin]: returns the (unconditional!) FreqDist for bin
+- Table 2.4 for more info
 
 '''
