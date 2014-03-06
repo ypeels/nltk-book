@@ -111,4 +111,6 @@ nltk.corpus.stopwords: high-frequency words like the, to and also
 - subclass of WordListCorpusReader
 - words(fileids): filenames 'english', 'french', etc.
 
+nltk.corpus.names: another subclass of WordListCorpusReader; male.txt and female.txt
+
 '''

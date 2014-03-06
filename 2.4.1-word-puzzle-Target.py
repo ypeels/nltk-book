@@ -1,9 +1,11 @@
 import nltk
 
+# Problem specification from Figure 2.9
 # my instinct is to solve it "backwards" - iterate through the wordbank and find all words satisfying the puzzle's constraint
 # the alternative is annoying logic, sampling from the letters...
 # well apparently this is how the book does it too! so i guess it's forward-thinking, haha
-
+# book's solution uses ntlk.probability.FreqDist instead. meh. 
+# weren't they trying to teach functions? i guess that was SO section 2.3
 
 
 # v2: Pythonic iteration, refactored about as clean as I can think of
