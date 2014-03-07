@@ -151,8 +151,16 @@ nltk.corpus.reader.wordnet.Synset instance attributes/methods - e.g., Synset('ca
 - ss.examples: raw list of example sentences
 - ss.lemmas: raw list of all the Lemma objects for the current synset
 - lemma(code): returns/constructs a Lemma object, where code is like 'car.n.01.automobile' (synonyms come in PAIRS!)
+- hyponyms(): returns list of Synset objects for all hyponyms ("subclasses", e.g. 'ambulance' is a hyponym of 'motorcar')
+- hypernyms(): returns list of Synset objects for all hypernyms ("superclasses")
+- hypernym_paths(): returns list of paths (each a list of Synset objects from ROOT hypernym[s??] to current Synset)
+- root_hypernyms(): returns list of most general hypernyms of a Synset (each hypernym is itself a Synset object)
+--- basically, crazy class hierarchies/taxonomies for LOTS of words. who DID all this data entry???
 
 nltk.corpus.reader.wordnet.Lemma instance attributes/methods - e.g., Lemma('car.n.01.automobile')
 - synset: raw string code of corresponding synset to which this lemma belongs, like 'car.n.01'
 - name: the actual "word", like "automobile"
+
+nltk.app.wordnet(): you can, for instance, explore the WordNet hierarchy by following hypernym/hyponym links
+- i didn't let it through Windows Firewall on my first try and was too lazy to change the setting
 '''
