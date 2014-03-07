@@ -31,4 +31,4 @@ Most likely, the authors didn't run `wordnet.synsets('automobile')` and just ASS
 
 print 'Finally, some code for the "Your Turn" Note:'
 for lemma in wordnet.lemmas('dish'):
-	print lemma.synset, lemma.synset.definition
+	print lemma.synset.name, lemma.synset.definition

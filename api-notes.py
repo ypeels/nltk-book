@@ -142,7 +142,8 @@ toolbox:
 nltk.corpus.wordnet - are we done going over corpora yet??
 - synsets(word): returns raw list of Synset objects (w/ codes) to which 'word' belongs; "thesaurus search for 'word'"
 - synset(code): returns an nltk.corpus.reader.wordnet.Synset object, where code is like 'car.n.01'
-- lemmas(word): returns raw list of all lemma objects belonging to all synsets of 'word'
+- lemmas(word): returns raw list of all Lemma objects belonging to all synsets of 'word'
+- antonyms(): returns list of all Lemma objects which are antonyms of self
 
 nltk.corpus.reader.wordnet.Synset instance attributes/methods - e.g., Synset('car.n.01')
 - see Figure 2.7 for technical terms: "lemma", "gloss", etc.
@@ -155,7 +156,14 @@ nltk.corpus.reader.wordnet.Synset instance attributes/methods - e.g., Synset('ca
 - hypernyms(): returns list of Synset objects for all hypernyms ("superclasses")
 - hypernym_paths(): returns list of paths (each a list of Synset objects from ROOT hypernym[s??] to current Synset)
 - root_hypernyms(): returns list of most general hypernyms of a Synset (each hypernym is itself a Synset object)
---- basically, crazy class hierarchies/taxonomies for LOTS of words. who DID all this data entry???
+- <background information>: an item's meronyms are its components; the item is its meronyms' holonym.
+- part_meronyms(): returns list of Synset objects which are "component parts" of self (for tree: trunk, limb, ...)
+- substance_meronyms(): returns list of Synset objects which are "substance parts" of self (for tree: heartwood, sapwood)
+- member_holonyms(): returns list of Synset objects which are formed by a COLLECTION of self (for tree: forest)
+    - similarly part_holonyms(), substance_holonyms(), and member_meronyms()
+    - hilarious example from text: mint.n.04 (mint leaf) has part_holonym mint'02 (mint plan) and substance_holonym mint.n.05 (mint candy)
+- entailments(): returns list of Synset objects which are implied by the (verb) self    
+- basically, crazy class hierarchies/taxonomies for LOTS of words. who DID all this data entry???
 
 nltk.corpus.reader.wordnet.Lemma instance attributes/methods - e.g., Lemma('car.n.01.automobile')
 - synset: raw string code of corresponding synset to which this lemma belongs, like 'car.n.01'
