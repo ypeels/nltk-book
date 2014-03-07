@@ -3,7 +3,7 @@ rem Python Tutorial 2.2.4: could also setenv PYTHONSTARTUP to setup ".pythonrc.p
 rem ... but i'm not gonna do that
 
 rem nope, "from nltk.book import *" does NOT traverse the python path, like i thought it would
-rem set PYTHONPATH=%CD% 
+set PYTHONPATH=%CD% 
 
 rem http://www.nltk.org/data.html - instead, set ANOTHER environment variable
 set NLTK_DATA=%CD%\nltk_data

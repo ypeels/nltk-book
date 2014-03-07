@@ -2,3 +2,6 @@
 *.pyc
 *.zip
 nltk_data/
+
+# reserved for a symlink to root directory's utils.py
+exercises/utils.py
