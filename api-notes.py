@@ -135,4 +135,24 @@ toolbox:
 - "The loose structure of Toolbox files makes it hard for us to do much more with them at this stage."
 - see Chapter 11
 
+
+2.5   WordNet
+=============
+
+nltk.corpus.wordnet - are we done going over corpora yet??
+- synsets(word): returns raw list of Synset objects (w/ codes) to which 'word' belongs; "thesaurus search for 'word'"
+- synset(code): returns an nltk.corpus.reader.wordnet.Synset object, where code is like 'car.n.01'
+- lemmas(word): returns raw list of all lemma objects belonging to all synsets of 'word'
+
+nltk.corpus.reader.wordnet.Synset instance attributes/methods - e.g., Synset('car.n.01')
+- see Figure 2.7 for technical terms: "lemma", "gloss", etc.
+- ss.lemma_names: raw list of the real words corresponding to each synonym ("lemma")
+- ss.definition: a prose definition (raw string)
+- ss.examples: raw list of example sentences
+- ss.lemmas: raw list of all the Lemma objects for the current synset
+- lemma(code): returns/constructs a Lemma object, where code is like 'car.n.01.automobile' (synonyms come in PAIRS!)
+
+nltk.corpus.reader.wordnet.Lemma instance attributes/methods - e.g., Lemma('car.n.01.automobile')
+- synset: raw string code of corresponding synset to which this lemma belongs, like 'car.n.01'
+- name: the actual "word", like "automobile"
 '''
