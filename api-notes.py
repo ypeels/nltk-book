@@ -165,7 +165,7 @@ nltk.corpus.reader.wordnet.Synset instance attributes/methods - e.g., Synset('ca
     - similarly part_holonyms(), substance_holonyms(), and member_meronyms()
     - hilarious example from text: mint.n.04 (mint leaf) has part_holonym mint'02 (mint plan) and substance_holonym mint.n.05 (mint candy)
 - entailments(): returns list of Synset objects which are implied by the (verb) self    
-- lowest_common_hypernyms(synset): returns list of lowest common hypernyms (as Synsets) - "If two synsets share a very specific hypernym — one that is low down in the hypernym hierarchy — they must be closely related."
+- lowest_common_hypernyms(synset): returns list of lowest common hypernyms (as Synsets) - "If two synsets share a very specific hypernym (one that is low down in the hypernym hierarchy) they must be closely related."
 - min_depth(): returns minimum "depth" from one of self's root hypernyms; use with result of lowest_common_hypernyms() to quantify degree of specificity
 - path_similarity(synset): returns score on [0, 1] "based on the shortest path that connects the concepts in the hypernym hierarchy"
 - basically, crazy class hierarchies/taxonomies for LOTS of words. who DID all this data entry???
@@ -178,4 +178,9 @@ nltk.app.wordnet(): you can, for instance, explore the WordNet hierarchy by foll
 - i didn't let it through Windows Firewall on my first try and was too lazy to change the setting
 
 nltk.corpus.verbnet: "a hierarchical verb lexicon linked to WordNet"
+
+
+2.8   Exercises
+===============
+4. nltk.corpus.state_union: reader for multiple plaintext documents
 '''
