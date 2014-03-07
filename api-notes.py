@@ -141,11 +141,13 @@ toolbox:
 
 nltk.corpus.wordnet - are we done going over corpora yet??
 - synsets(word): returns raw list of Synset objects (w/ codes) to which 'word' belongs; "thesaurus search for 'word'"
+    - this is essential to "translate" from English words into Synset's "codes"
 - synset(code): returns an nltk.corpus.reader.wordnet.Synset object, where code is like 'car.n.01'
 - lemmas(word): returns raw list of all Lemma objects belonging to all synsets of 'word'
 - antonyms(): returns list of all Lemma objects which are antonyms of self
 
 nltk.corpus.reader.wordnet.Synset instance attributes/methods - e.g., Synset('car.n.01')
+- note that to instantiate a Synset object, you can't just use Synset('car.n.01'); have to use wordnet.synset('car.n.01')
 - see Figure 2.7 for technical terms: "lemma", "gloss", etc.
 - ss.lemma_names: raw list of the real words corresponding to each synonym ("lemma")
 - ss.definition: a prose definition (raw string)
@@ -163,6 +165,9 @@ nltk.corpus.reader.wordnet.Synset instance attributes/methods - e.g., Synset('ca
     - similarly part_holonyms(), substance_holonyms(), and member_meronyms()
     - hilarious example from text: mint.n.04 (mint leaf) has part_holonym mint'02 (mint plan) and substance_holonym mint.n.05 (mint candy)
 - entailments(): returns list of Synset objects which are implied by the (verb) self    
+- lowest_common_hypernyms(synset): returns list of lowest common hypernyms (as Synsets) - "If two synsets share a very specific hypernym — one that is low down in the hypernym hierarchy — they must be closely related."
+- min_depth(): returns minimum "depth" from one of self's root hypernyms; use with result of lowest_common_hypernyms() to quantify degree of specificity
+- path_similarity(synset): returns score on [0, 1] "based on the shortest path that connects the concepts in the hypernym hierarchy"
 - basically, crazy class hierarchies/taxonomies for LOTS of words. who DID all this data entry???
 
 nltk.corpus.reader.wordnet.Lemma instance attributes/methods - e.g., Lemma('car.n.01.automobile')
@@ -171,4 +176,6 @@ nltk.corpus.reader.wordnet.Lemma instance attributes/methods - e.g., Lemma('car.
 
 nltk.app.wordnet(): you can, for instance, explore the WordNet hierarchy by following hypernym/hyponym links
 - i didn't let it through Windows Firewall on my first try and was too lazy to change the setting
+
+nltk.corpus.verbnet: "a hierarchical verb lexicon linked to WordNet"
 '''
