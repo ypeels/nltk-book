@@ -116,7 +116,7 @@ stopwords: high-frequency words like the, to and also
 
 names: another subclass of WordListCorpusReader; male.txt and female.txt
 
-cmudict: a pronouncing dictionary
+cmudict: a pronouncing dictionary. `from nltk.corpus import cmudict` - because `import nltk.corpus.cmudict` FAILS. STUPID NON-OBVIOUS NLTK API
 - customized class CMUDictCorpusReader
 - "list" of: (word, [syllables])
 - quacks like a Python dictionary, but cmudict[word] returns ALL CATALOGUED PRONUNCIATIONS [[syllables1], [syllables2]]
