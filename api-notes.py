@@ -195,5 +195,19 @@ print '''
 ===============================================
 
 nltk.word_tokenize(str): returns list of all tokens (words and punctuation)
+nltk.clean_html(str): returns string of all RAW TEXT (scrubs 'str' of all html tags, headers)
+nltk.wordpunct_tokenize(str): returns list of all tokens, with punctuation tokenized a LITTLE more aggressively/in a less sophisticated manner?
 
 nltk.text.Text(self, tokens, name=None): needs list of TOKENS to instantiate, not raw string
+nltk.data.find(<relative path in nltk_data>): returns absolute path of file name for any corpus item
+
+Third party libraries mentioned in the book
+-----------------------
+- the "more sophisticated... Beautiful Soup package" for HTML scrubbing
+- Universal Feed Parser to process RSS feeds
+- pypdf to access text in PDF binary files
+- pywin32 to access text in MSWord binary files
+
+Python notes that my 2 previous tutorials somehow missed? (Or I didn't note)
+- type(var) displays the type of 'var'
+'''
