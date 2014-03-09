@@ -183,5 +183,5 @@ nltk.corpus.verbnet: "a hierarchical verb lexicon linked to WordNet"
 2.8   Exercises
 ===============
 4. nltk.corpus.state_union: reader for multiple plaintext documents
-12. wordnet.all_synsets('n'): returns all noun synsets
+13. wordnet.all_synsets('n'): returns all noun synsets. WARNING: THIS IS A GENERATOR, NOT A LIST; use it ONCE in a for loop
 '''
