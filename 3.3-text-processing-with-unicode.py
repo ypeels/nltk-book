@@ -10,7 +10,7 @@ file = codecs.open(
 
 lines = file.readlines()
 for line in lines:
-    print line.strip().encode('unicode_escape')
+    print line.strip().encode('unicode_escape')     # Figure 3.4: you can also decode() raw strings from disk/web/etc. if their encoding is known
     
 # ord(char) returns the (ascii-only?!) code of char
 print "0x%x" % ord('a'), "\x61"
