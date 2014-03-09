@@ -185,3 +185,15 @@ nltk.corpus.verbnet: "a hierarchical verb lexicon linked to WordNet"
 4. nltk.corpus.state_union: reader for multiple plaintext documents
 13. wordnet.all_synsets('n'): returns all noun synsets. WARNING: THIS IS A GENERATOR, NOT A LIST; use it ONCE in a for loop
 '''
+
+
+print '''
+3.  Processing Raw Text
+#######################
+
+3.1   Accessing Text from the Web and from Disk
+===============================================
+
+nltk.word_tokenize(str): returns list of all tokens (words and punctuation)
+
+nltk.text.Text(self, tokens, name=None): needs list of TOKENS to instantiate, not raw string
