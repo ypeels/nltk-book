@@ -234,7 +234,17 @@ nltk.util.Index: the "multi-valued dictionary" convenience class i wanted!
 nltk.text.Text
 - accessible as nltk.Text
 - findall() takes NLTK-CUSTOM regexps with angle brackets used to mark token boundaries
-    - whitespace INSIDE the angle brackets is ignored (big whoop)
+    - ALL whitespace is ignored? (big whoop)
     - verbose regexps are not supported (nooooooo! well, you could piece the string together...)
     - cannot compile?? oh boy...
+    - PRINTS RESULTS ONLY - doesn't save the data... doesn't seem very useful...
+    
+nltk.re_show(regexp, s)
+- prints s, with {matches to regexp} delimited
+- like Text.findall() this only seems useful in interactive mode...
+    
+nltk.app.nemo(): graphical interface for exploring regular expressions. "Finding (and Replacing) Nemo"
+- Nemo box: the regexp
+- maki box: replacement text, with \# marking the #th captured substring
+- kinda silly, since the book hasn't talked about substitutions yet...
 '''
