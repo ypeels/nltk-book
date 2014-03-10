@@ -235,9 +235,10 @@ nltk.text.Text
 - accessible as nltk.Text
 - findall() takes NLTK-CUSTOM regexps with angle brackets used to mark token boundaries
     - ALL whitespace is ignored? (big whoop)
-    - verbose regexps are not supported (nooooooo! well, you could piece the string together...)
+    - verbose regexps are not supported (nooooooo! well, you could piece the string together...)? maybe with "(?x)" flag?? see 3.7
     - cannot compile?? oh boy...
     - PRINTS RESULTS ONLY - doesn't save the data... doesn't seem very useful...
+        - and DOESN'T do what you expect, i.e., return value is DIFFERENT from re.findall()
     
 nltk.re_show(regexp, s)
 - prints s, with {matches to regexp} delimited
@@ -265,5 +266,15 @@ So they never DEFINED normalization explicitly  , but examples include
 - stemming all words ('lying' becomes 'lie', etc.)
 - lemmatization (see chapter summary in text)
 
+
+3.7   Regular Expressions for Tokenizing Text
+=============================================
+nltk.regexp_tokenize(text, pattern, gaps=False): the REAL equivalent of re.findall() and re.split()...
+- gaps: when False, the function behaves EXACTLY like re.findall(); when True, the function behaves EXACTLY like re.split()
+- differences with 're' that i just find confusing
+    - start pattern with "(?x)" to enable verbose regexps!? come ON, you're going to make this even MORE OPAQUE!?
+    - avoids the need for special treatment of parentheses (don't need to start parenthesized expression with "?:")
+- "nltk.regexp_tokenize() is more efficient [than re.findall()]"
+    - but i find that timeit numbers confirm the OPPOSITE - that this stupid function is friggin SLOWER than vanilla re.findall() and re.split()
 
 '''

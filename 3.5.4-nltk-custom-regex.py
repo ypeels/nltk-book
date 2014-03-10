@@ -4,7 +4,7 @@
 nltk.text.Text.findall(regexp) allows direct application of regexps to its token LIST
 with the following custom NLTK modifications:
 - without compiliation?
-- without verbose regexp support :(
+- without verbose regexp support :(  maybe with "(?x)" prefix? see 3.7
 - regexp for each TOKEN inside angle brackets
 - ALL (?) whitespace is ignored
 '''
