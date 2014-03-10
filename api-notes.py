@@ -1,6 +1,6 @@
 print '''
 
-In order of appearance.
+In order of appearance (some liberties taken within each section for readability)
 To display docstring of 'obj', just perform
 >>> help(obj)
 '''
@@ -215,4 +215,26 @@ Python notes that my 2 previous tutorials somehow missed? (Or I didn't note)
 3.4   Regular Expressions for Detecting Word Patterns
 =====================================================
 nltk.corpus.treebank: "raw, tagged, parsed and combined data from Wall Street Journal for 1650 sentences (99 treebank files wsj_0001 .. wsj_0099)
+
+
+3.5   Useful Applications of Regular Expressions
+================================================
+nltk.corpus.toolbox: uh, a rotokas dictionary? get all words using words('rotokas.dic')
+
+nltk.tokenwrap(tokens): pretty print list of text tokens, breaking lines on whitespace
+
+nltk.probability.ConditionalFreqDist: can be initialized with a list of 2-char strings, since "each of these is a pair")
+- accessible as nltk.ConditionalFreqDist
+
+nltk.util.Index: the "multi-valued dictionary" convenience class i wanted! 
+- accessible as nltk.Index
+- construct with a list of pairs: index = nltk.Index( [(key, value)] ), where there MAY BE DUPLICATE KEYS
+- access with index[key]: [ value1, ..., valueN ]
+
+nltk.text.Text
+- accessible as nltk.Text
+- findall() takes NLTK-CUSTOM regexps with angle brackets used to mark token boundaries
+    - whitespace INSIDE the angle brackets is ignored (big whoop)
+    - verbose regexps are not supported (nooooooo! well, you could piece the string together...)
+    - cannot compile?? oh boy...
 '''
