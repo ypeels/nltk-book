@@ -1,2 +1,4 @@
 Section(s)	File(s)
 2.2.4		code_random_text.py
+2.3         code_plural.py
+3.6         code_stemmer_indexing.py

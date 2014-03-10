@@ -247,4 +247,23 @@ nltk.app.nemo(): graphical interface for exploring regular expressions. "Finding
 - Nemo box: the regexp
 - maki box: replacement text, with \# marking the #th captured substring
 - kinda silly, since the book hasn't talked about substitutions yet...
+
+
+3.6   Normalizing Text
+======================
+nltk.stem.porter.PorterStemmer
+nltk.stem.lancaster.LancasterStemmer
+- stem(str) is an instance method of each: returns a guess at the stem of str (e.g., "lie" for "lying")
+- "The Porter Stemmer is a good choice if you are indexing some texts and want to support search using alternative forms of words"
+
+nltk.stem.wordnet.WordNetLemmatizer
+- lemmatize(str) removes affixes of 'str' if it is in its dictionary
+- "The WordNet lemmatizer is a good choice if you want to compile the vocabulary of some texts and want a list of valid lemmas (or lexicon headwords)."
+
+So they never DEFINED normalization explicitly  , but examples include
+- converting all words to lower case
+- stemming all words ('lying' becomes 'lie', etc.)
+- lemmatization (see chapter summary in text)
+
+
 '''
