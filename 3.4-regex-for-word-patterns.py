@@ -42,6 +42,7 @@ def create_wordlist():
         
         
 print '3.4.1 Using Basic Meta-Characters - Your Turn'
+print 'trivial, but included to satisfy curiosity regarding the answer'
 print "Regex search for /..j..t../"
 #smart_import(['re', 'nltk'])
 import re, nltk, timeit
@@ -60,7 +61,7 @@ print [w for w in wordlist if regex1.search(w)][:num_to_display]                
 
 
 print '''
-3.4.2 Ranges and Closures
+3.4.2 Ranges and Closures - Your Turn
 "finger-twisters' - telephone numbers that only use PART of the number pad
 '''
 import re, nltk
