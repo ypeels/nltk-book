@@ -210,4 +210,9 @@ Third party libraries mentioned in the book
 
 Python notes that my 2 previous tutorials somehow missed? (Or I didn't note)
 - type(var) displays the type of 'var'
+
+
+3.4   Regular Expressions for Detecting Word Patterns
+=====================================================
+nltk.corpus.treebank: "raw, tagged, parsed and combined data from Wall Street Journal for 1650 sentences (99 treebank files wsj_0001 .. wsj_0099)
 '''

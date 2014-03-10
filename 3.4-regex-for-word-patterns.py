@@ -48,7 +48,7 @@ import re, nltk, timeit
 create_wordlist()
 regex1_str = '..j..t..'
 regex1 = re.compile(regex1_str)
-print [w for w in wordlist if regex1.search(w)][:num_to_display]
+print [w for w in wordlist if regex1.search(w)][:num_to_display]                                            # re.search() returns True iff ANY match for the regexp was found
     # the result is, of course, much longer than /^..j..t..$/, whose result it contains as a subset
 
 # performance measurement!
@@ -85,6 +85,7 @@ And finally the tiny 'instructive' case they mention in passing
 '''
 import re, nltk
 wsj = sorted(set(nltk.corpus.treebank.words()))
+print "Note that parentheses are used in the following example to specify operator scope, NOT to capture substrings"
 parenthesized = run_search('(ed|ing)$', wsj)
 unparenthesized = run_search('ed|ing$', wsj)                        # apparently '|' has low priority (or $ has high priority?)
 equivalent_to_unparenthesized = run_search('(ed)|(ing$)', wsj)      # will search for all strings ending in 'ing' or CONTAINING 'ed' (not necessarily at the end!)
