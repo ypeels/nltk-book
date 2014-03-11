@@ -14,7 +14,7 @@ def segment(text, segs):
             words.append(text[last:i+1])    # not sure why they didn't just use a list of break indices...
             last = i+1
     words.append(text[last:])
-    return words
+    return words                            # oh well, later Examples are going to import this module
 
 
     
