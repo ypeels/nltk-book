@@ -35,7 +35,7 @@ class IndexedText(object):                                          # object ori
             lcontext = ' '.join(self._text[i-wc:i])
             rcontext = ' '.join(self._text[i:i+wc])
             ldisplay = '%*s'  % (width, lcontext[-width:])          # string formatting from 3.9
-            rdisplay = '%-*s' % (width, rcontext[:width])
+            rdisplay = '%-*s' % (width, rcontext[:width])           # recall that the "*" allows width to be specified at runtime
             print ldisplay, rdisplay
 
     def _stem(self, word):

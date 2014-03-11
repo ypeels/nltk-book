@@ -1,9 +1,10 @@
-print '''
+'''Notes on the NLTK API
 
 In order of appearance (some liberties taken within each section for readability)
 To display docstring of 'obj', just perform
 >>> help(obj)
 '''
+print __doc__
 
 print '''
 1. Language Processing and Python
@@ -284,5 +285,10 @@ nltk.tokenize.punkt.PunktSentenceTokenizer
 - nltk.data.load('tokenizers/punkt/english.pickle'): unserializes Punkt sentence segmenter
     - from README, these things are mostly data, generated from nltk.tokenize.punkt, and trained on lots of corpora
 - tokenize(raw text): segments raw text into sentences, which it returns 
+
+
+3.9   Formatting: From Lists to Strings
+=======================================
+nltk.corpus.genesis.words('english-kjv.txt')
     
 '''
