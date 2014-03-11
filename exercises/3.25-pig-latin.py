@@ -11,6 +11,7 @@ english_pattern = (
         # leading consonants (including y, which must [?] be consonant if leading). oops, 'y' was part of phase 3...
         #r'^(y|[bcdfghjklmnpqrstvwxz]*)'        # phase 1
         r'^(y|[bcdfghjklmnprstvwxz(?:qu)]*)'    # phase 3: (?:qu) to detect leading "qu"
+        #r'^y?[^aeiouy]*' - didn't test this, but could probably get away with it, assuming word.isalpha()
         
         # the rest of the word, starting with its first vowel. (assumes internal 'y' is vowel-like)
         r'([aeiouy]\w*)'      
