@@ -2,7 +2,7 @@
 Example 3.9 from Section 3.8  Word Segmentation
 '''
 
-print __doc__
+
 
 from code_segment import segment
 
@@ -11,12 +11,13 @@ from code_segment import segment
 def evaluate(text, segs):
     words = segment(text, segs)
     text_size = len(words)
-    lexicon_size = len(' '.join(list(set(words))))  
+    lexicon_size = len(' '.join(list(set(words))))
     #print 'sum(seg) =', sum(map(int, list(segs)))
     return text_size + lexicon_size                 # Figure 3.8: the objective function from Brent 1995
                                                     # lexicon_size will be off by 1 relative to the Figure (which added a boundary marker to EVERY word)
 
 if __name__ == "__main__":
+    print __doc__
     text = "doyouseethekittyseethedoggydoyoulikethekittylikethedoggy"
     seg1 = "0000000000000001000000000010000000000000000100000000000"
     seg2 = "0100100100100001001001000010100100010010000100010010000"

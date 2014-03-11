@@ -2,7 +2,7 @@
 Example 3.7 from Section 3.8  Word Segmentation
 '''
 
-print __doc__
+
 
 # Natural Language Toolkit: code_segment
 
@@ -19,6 +19,7 @@ def segment(text, segs):
 
     
 if __name__ == "__main__":
+    print __doc__
     text = "doyouseethekittyseethedoggydoyoulikethekittylikethedoggy"
     seg1 = "0000000000000001000000000010000000000000000100000000000"
     seg2 = "0100100100100001001001000010100100010010000100010010000"
