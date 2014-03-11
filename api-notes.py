@@ -290,5 +290,13 @@ nltk.tokenize.punkt.PunktSentenceTokenizer
 3.9   Formatting: From Lists to Strings
 =======================================
 nltk.corpus.genesis.words('english-kjv.txt')
+
+
+3.12  Exercises
+===============
+nltk.metrics.spearman.spearman_correlation
+- available as nltk.spearman_correlation(ranks1, ranks2)
+- returns a correlation coefficient for 2 rankings, each dicts or sequences of (key, rank)
+    - "only calculated for keys in both rankings (for meaningful results, remove keys present in only one list before ranking)."
     
 '''
