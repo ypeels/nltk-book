@@ -277,4 +277,12 @@ nltk.regexp_tokenize(text, pattern, gaps=False): the REAL equivalent of re.finda
 - "nltk.regexp_tokenize() is more efficient [than re.findall()]"
     - but i find that timeit numbers confirm the OPPOSITE - that this stupid function is friggin SLOWER than vanilla re.findall() and re.split()
 
+    
+3.8   Segmentation
+==================
+nltk.tokenize.punkt.PunktSentenceTokenizer
+- nltk.data.load('tokenizers/punkt/english.pickle'): unserializes Punkt sentence segmenter
+    - from README, these things are mostly data, generated from nltk.tokenize.punkt, and trained on lots of corpora
+- tokenize(raw text): segments raw text into sentences, which it returns 
+    
 '''
