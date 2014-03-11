@@ -3,6 +3,7 @@ Exercise 3.25
 Pig Latin, in 3 stages
 '''
 
+import nltk     # for word_tokenize(), because I'm lazy (i.e. part of NLTK's target audience)
 import re
 
 english_pattern = (
@@ -26,9 +27,18 @@ english_re = re.compile(english_pattern)
 def pig_latinize_word(word):
     return english_re.sub(piglatin_replacement_pattern, word)
     
+def pig_latinize_text(text):
+    words = [ word for word in nltk.word_tokenize(text) if word.isalpha() ]
+    
+    # instead of worrying about punctuation, i'll just MODIFY WORDS in the original string
+    for w in set(words):
+        text = text.replace(w, pig_latinize_word(w))            # remember, str is immutable!
+    return text
+    
     
 if __name__ == "__main__":
-    for word in "the quick brown fox jumps over the lazy dog school squeak".split():
+    sentence = "the quick brown fox jumps over the lazy dog school squeak"
+    for word in sentence.split():
         print word, "->", pig_latinize_word(word)
     
-    
+    print pig_latinize_text(sentence)
