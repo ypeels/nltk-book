@@ -1,4 +1,4 @@
-# Example 2.8
+# Example 2.8 from Section 2.4
 # Natural Language Toolkit: code_unusual
 import nltk
 

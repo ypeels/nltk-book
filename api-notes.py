@@ -29,6 +29,7 @@ generate(): generates random text in the style of the object instance.  Cool!!  
 
 nltk.probability.FreqDist  # help(FreqDist) for more info
 -------------------------
+- accessible as nltk.FreqDist
 - quacks like a dictionary of { "word": count } - but that's not all!
 - FreqDist(Text): constructor (more generally, argument can be any iterable!? e.g. [len(w) for w in text])
 - keys(): returns samples sorted in **decreasing order of frequency**
@@ -298,5 +299,11 @@ nltk.metrics.spearman.spearman_correlation
 - available as nltk.spearman_correlation(ranks1, ranks2)
 - returns a correlation coefficient for 2 rankings, each dicts or sequences of (key, rank)
     - "only calculated for keys in both rankings (for meaningful results, remove keys present in only one list before ranking)."
-    
+   
+   
+4.3   Questions of Style 
+========================
+nltk.probability.FreqDist: cumulative is for plot only! for tables, must do by hand??
+
+
 '''
