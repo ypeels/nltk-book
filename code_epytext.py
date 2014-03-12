@@ -31,11 +31,12 @@ def accuracy(reference, test):
 
     if len(reference) != len(test):
         raise ValueError("Lists must have the same length.")        # ooh, silently introducing exceptions, are we?    
-    num_correct = 0
-    for x, y in zip(reference, test):                               # this was originally "izip(reference, test)"
-        if x == y:
-            num_correct += 1
-    return float(num_correct) / len(reference)
+    #num_correct = 0
+    #for x, y in zip(reference, test):                              # this was originally "izip(reference, test)"
+    #    if x == y:
+    #        num_correct += 1
+    num_correct = sum(1 for x, y in zip(reference, test) if x == y) # Pythonic version. you were JUST doing this in Section 4.3! come ON
+    return float(num_correct) / len(reference)                      # what happened to "assuming from __future__ import division"??
     
     
 if __name__ == "__main__":
