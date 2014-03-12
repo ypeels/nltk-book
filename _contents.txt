@@ -1,5 +1,8 @@
-Section(s)	File(s)
-2.2.4		code_random_text.py
-2.3             code_plural.py
-3.6             code_stemmer_indexing.py
-3.8             code_segment.py, code_evaluate.py, code_anneal.py
+Section(s)  File(s)
+2.2.4       code_random_text.py
+2.3         code_plural.py
+2.4         code_unusual.py
+3.6         code_stemmer_indexing.py
+3.8         code_segment.py, code_evaluate.py, code_anneal.py
+3.9         code_modal_tabulate.py
+4.4         code_get_text.py
