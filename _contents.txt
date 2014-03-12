@@ -5,4 +5,4 @@ Section(s)  File(s)
 3.6         code_stemmer_indexing.py
 3.8         code_segment.py, code_evaluate.py, code_anneal.py
 3.9         code_modal_tabulate.py
-4.4         code_get_text.py
+4.4         code_get_text.py, code_freq_words1.py, code_freq_words2.py, code_epytext.py

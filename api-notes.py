@@ -306,4 +306,10 @@ nltk.metrics.spearman.spearman_correlation
 nltk.probability.FreqDist: cumulative is for plot only! for tables, must do by hand??
 
 
+4.4   Functions: The Foundation of Structured Programming
+=========================================================
+nltk.util.clean_url(url)
+- accessible as nltk.clean_url
+- convenience function that combines wget + clean_html()
+
 '''
