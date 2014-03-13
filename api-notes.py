@@ -312,4 +312,9 @@ nltk.util.clean_url(url)
 - accessible as nltk.clean_url
 - convenience function that combines wget + clean_html()
 
+
+4.6   Program Development
+=========================
+- "Most NLTK modules also include a demo() function which can be used to see examples of the module in use"
+
 '''
