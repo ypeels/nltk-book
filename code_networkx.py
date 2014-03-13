@@ -7,7 +7,7 @@ Figure 4.15: Using the NetworkX and Matplotlib Libraries
 initializes an empty graph (3) then [recursively] traverses the WordNet hypernym hierarchy adding edges to the graph (1).
 Notice that the traversal is recursive (2)
 
-Had to install:
+On Windows, had to install:
 - networkx
 - pygraphviz
 
@@ -15,6 +15,18 @@ Still gives random errors in Windows about graphviz not being installed
 - http://stackoverflow.com/questions/4571067/installing-pygraphviz-on-windows/7537047#7537047
 - http://pygraphviz.github.io/documentation/latest/reference/faq.html
 - screw it, just try it in Linux
+
+On Linux http://networkx.github.io/documentation/latest/install.html
+- sudo pip install networkx
+- sudo pip install matplotlib (oh man, it's like 50 MB)
+    - requires freetype? annoying
+- sudo apt-get install python-matplotlib
+    - ugh, it has to install TONS of packages
+    - forget it for now
+
+Uninstall when done??
+- sudo pip uninstall matplotlib
+- sudo pip uninstall networkx
 '''
 
 
