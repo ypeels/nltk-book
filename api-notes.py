@@ -317,4 +317,14 @@ nltk.util.clean_url(url)
 =========================
 - "Most NLTK modules also include a demo() function which can be used to see examples of the module in use"
 
+
+4.8   A Sample of Python Libraries
+==================================
+"NLTK's clustering package nltk.cluster makes extensive use of NumPy arrays, 
+and includes support for k-means clustering, Gaussian EM clustering, 
+group average agglomerative clustering, and dendrogram plots. 
+For details, type help(nltk.cluster)."
+
+[First you have to explicitly `import nltk.cluster`]
+
 '''
