@@ -25,6 +25,8 @@ def insert(trie, key, value):
         trie['value'] = value
 
 if __name__ == "__main__":
+    print __doc__
+
     import pprint
     trie = {}
     insert(trie, 'chat', 'cat')
