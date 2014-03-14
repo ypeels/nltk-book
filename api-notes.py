@@ -304,6 +304,11 @@ nltk.metrics.spearman.spearman_correlation
 4.3   Questions of Style 
 ========================
 nltk.probability.FreqDist: cumulative is for plot only! for tables, must do by hand??
+nltk.util
+- trigrams(), available as nltk.trigrams()
+- ngrams(), available as nltk.ngrams()
+- generalizations of bigrams() from a previous chapter
+
 
 
 4.4   Functions: The Foundation of Structured Programming
