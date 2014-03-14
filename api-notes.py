@@ -340,4 +340,10 @@ For details, type help(nltk.cluster)."
     - returns # chars to be substituted, inserted, or deleted to transform s1 into s2
 28. http://www.clintoneast.com/articles/words.php was down when I checked
 
+
+4.x.5 Algorithm Designs (Chapter 4 Extras)
+=======================
+nltk.misc.sort: only accessible using `from nltk.misc import sort`?
+- sort.bubble(), sort.merge(), sort.quick() all sort in-place, and output # modifications to list
+
 '''
