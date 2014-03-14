@@ -332,4 +332,11 @@ For details, type help(nltk.cluster)."
 
 [First you have to explicitly `import nltk.cluster`]
 
+
+4.11  Exercises
+===============
+25. nltk.metrics.distance.edit_distance(s1, s2)
+    - available as nltk.edit_distance()
+    - returns # chars to be substituted, inserted, or deleted to transform s1 into s2
+
 '''
