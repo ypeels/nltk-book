@@ -346,4 +346,6 @@ For details, type help(nltk.cluster)."
 nltk.misc.sort: only accessible using `from nltk.misc import sort`?
 - sort.bubble(), sort.merge(), sort.quick() all sort in-place, and output # modifications to list
 
+nltk.misc.wordfinder (`from nltk.misc.wordfinder import wordfinder`)
+- wordfinder(words): returns (grid, used) which is a word search puzzle (!) with words in 'used'
 '''
