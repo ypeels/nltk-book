@@ -7,7 +7,7 @@ n = 1, and n = len(sent)?
 
 wtf?? what method???
 
-ohhh from Section 4.3.3:
+ohhh from Section 4.3.3 Some Legitimate Uses for Counters:
 "
 >>> sent = ['The', 'dog', 'gave', 'John', 'the', 'newspaper']
 >>> n = 3
@@ -31,6 +31,8 @@ def ngrams(sent, n):
     return [sent[i:i+n] for i in range(len(sent)-n+1)]
     
 if __name__ == "__main__":
+    print __doc__
+
     sent = ['The', 'dog', 'gave', 'John', 'the', 'newspaper']
     print ngrams(sent, 3)
     
