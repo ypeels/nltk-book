@@ -338,5 +338,6 @@ For details, type help(nltk.cluster)."
 25. nltk.metrics.distance.edit_distance(s1, s2)
     - available as nltk.edit_distance()
     - returns # chars to be substituted, inserted, or deleted to transform s1 into s2
+28. http://www.clintoneast.com/articles/words.php was down when I checked
 
 '''
