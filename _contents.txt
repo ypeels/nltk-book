@@ -10,4 +10,4 @@ Section(s)  File(s)
 4.7         code_trie.py, code_search_documents.py, code_strings_to_ints.py, code_virahanka.py
 4.8         code_modal_plot.py [pylab/matplotlib], code_networkx.py
 4.x.2       code_check_parens.py, code_convert_parens.py
-4.x.7       code_hill_clib.py
+4.x.7       code_hill_climb.py
